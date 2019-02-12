@@ -1,0 +1,13 @@
+<h2>Edit Comment</h2>
+
+<%= form_for @comment, url:my_thread_comment_path(@my_thread,@comment) do |f| %>
+<p>
+<%= f.text_area :body %> 
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<p>
+  <%= link_to "cancell", my_thread_path(@my_thread) %>
+</p>
+<% end %>
